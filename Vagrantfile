@@ -1,4 +1,5 @@
 # -*- mode: ruby -*-
+
 Vagrant.require_version '>= 1.9.0'
 plugins = [
   {
@@ -6,9 +7,9 @@ plugins = [
     version: '~> 0.9'
   },
   {
-    plugin: 'vagrant-disksize',
-    version: '~> 0.1.2'
-  }
+    plugin: 'vagrant-itamae',
+    version: '~> 0.2'
+  },
 ]
 
 # 必須プラグインのチェック
