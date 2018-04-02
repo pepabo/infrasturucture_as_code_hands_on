@@ -1,12 +1,13 @@
 require 'rake'
 require 'yaml'
 require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
+RuboCop::RakeTask.new
 
-task :spec    => 'spec:all'
-task :default => :spec
+task spec: 'spec:all'
+task default: :spec
 
 namespace :spec do
-
   def properties
     YAML.load_file('vagrant_properties.yml')
   end
@@ -16,8 +17,8 @@ namespace :spec do
     targets << host
   end
 
-  task :all     => targets
-  task :default => :all
+  task all: targets
+  task default: :all
 
   targets.each do |target|
     desc "Run serverspec tests to #{target}"

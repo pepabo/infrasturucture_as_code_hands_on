@@ -27,3 +27,8 @@ $ vagrant up www-1
 ```
 $ bin/rake spec:www-1
 ```
+
+# 書式のテスト
+```
+$ bin/rake rubocop
+```

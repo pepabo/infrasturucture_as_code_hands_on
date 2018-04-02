@@ -9,7 +9,7 @@ plugins = [
   {
     plugin: 'vagrant-itamae',
     version: '~> 0.2'
-  },
+  }
 ]
 
 # 必須プラグインのチェック
@@ -20,8 +20,8 @@ plugins.each do |p|
   end
 end
 
-Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/xenial64"
+Vagrant.configure('2') do |config|
+  config.vm.box = 'ubuntu/xenial64'
 
   config.properties.to_hash.each do |(name, p)|
     config.vm.define name do |c|
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
         itamae.sudo = true
         itamae.shell = '/bin/bash'
         itamae.recipes = ['./bootstrap.rb']
-        itamae.yaml= "./nodes/#{p.role}.yaml"
+        itamae.yaml = "./nodes/#{p.role}.yaml"
       end
     end
   end
