@@ -1,3 +1,4 @@
+require 'spec_helper'
 
 describe file('/var/www/wordpress') do
   it { should be_directory }
