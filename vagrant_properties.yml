@@ -1,0 +1,29 @@
+lb-1:
+  hostname: lb-1.hands-on.pbdev
+  role: lb
+  mng_ip: 172.18.1.11
+
+lb-2:
+  hostname: lb-2.hands-on.pbdev
+  role: lb
+  mng_ip: 172.18.1.12
+
+proxy-1:
+  hostname: proxy-1.hands-on.pbdev
+  role: proxy
+  mng_ip: 172.18.1.21
+
+proxy-2:
+  hostname: proxy-2.hands-on.pbdev
+  role: proxy
+  mng_ip: 172.18.1.22
+
+www-1:
+  hostname: www-1.hands-on.pbdev
+  role: www
+  mng_ip: 172.18.1.31
+
+www-2:
+  hostname: www-2.hands-on.pbdev
+  role: www
+  mng_ip: 172.18.1.32
