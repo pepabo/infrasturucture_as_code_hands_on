@@ -1,0 +1,13 @@
+upstream app {
+  <% node['proxy']['app']['servers'].each do |s| %>
+  server <%= s %>;
+  <% end %>
+}
+
+server {
+  listen       80;
+  server_name  localhost;
+  location / {
+    proxy_pass http://app/;
+  }
+}
